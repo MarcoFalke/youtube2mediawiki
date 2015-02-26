@@ -493,10 +493,10 @@ if __name__ == "__main__":
     usage = "Usage: %prog [options] youtubeid"
     parser = OptionParser(usage=usage)
     parser.add_option('-u', '--username', dest='username', help='wiki username', type='string')
-    parser.add_option('-p', '--password', dest='password', help='wiki password\n(can also be provided via Y2M_PASSWORD environment vairable)', type='string')
+    parser.add_option('-p', '--password', dest='password', help='wiki password\n(can also be provided via Y2M_PASSWORD environment variable)', type='string')
     parser.add_option('-w', '--url', dest='url', help='wiki api url [default:http://commons.wikimedia.org/w/api.php]',
                       default='http://commons.wikimedia.org/w/api.php', type='string')
-    parser.add_option('-n', '--name', dest='name', help='name of file on wiki, by default title on youtube is used', type='string', default='')
+    parser.add_option('-n', '--name', dest='name', help='name of file on wiki, by default title on YouTube is used', type='string', default='')
     parser.add_option('-d', '--debug', dest='debug', help='output debug information', action="store_true")
     parser.add_option('-i', '--ignore-warnings', dest='ignorewarnings', help='ignore warnings during upload', action="store_true")
     (opts, args) = parser.parse_args()
