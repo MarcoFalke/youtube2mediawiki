@@ -530,9 +530,8 @@ def ffmpeg_installed():
 
     if DEBUG:
         print 'Testing for ' + ffmpeg + ' on ' + platform.system()
-    try:
-        subprocess.call([cmd_path, ffmpeg], stdout=open(os.devnull, 'wb'), stderr=subprocess.STDOUT)
-    except:
+    if 0 != subprocess.call([cmd_path, ffmpeg], stdout=open(os.devnull, 'wb'), stderr=subprocess.STDOUT):
+        ffmpeg = './' + ffmpeg
         if not os.path.isfile(ffmpeg):
             print 'Install ffmpeg or place ' + ffmpeg + ' in the current working directory (' + os.getcwd() + ')'
             return False
