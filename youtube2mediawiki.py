@@ -457,7 +457,7 @@ class Mediawiki(object):
             if DEBUG:
                 if 'info' in r['error']:
                     print r['error']['info']
-                else
+                else:
                     print r['error']
             raise Exception("Upload error") # return r
         filekey = r['upload']['filekey']
@@ -504,7 +504,7 @@ class Mediawiki(object):
         if r and r.get('upload', {}).get('result') == 'Success':
             result_url = r['upload']['imageinfo']['descriptionurl']
             return result_url
-        else
+        else:
             raise Exception("Upload error during finalize")
 
     def edit_page(self, pagename, text, comment=''):
