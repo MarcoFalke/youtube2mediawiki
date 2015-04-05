@@ -561,7 +561,7 @@ def import_youtube(youtube_id, username, password, mediawiki_url, name=''):
             filename_video = os.path.join(d, "video.dat")
             filename_audio = os.path.join(d, "audio.dat")
             yt.download(youtube_id, filename_video, filename_audio)
-            if not ( 0 == subprocess.call([ffmpeg, "-i", filename_video, "-i", filename_audio, "-c:v", "copy", "-c:a", "copy", filename], stdout=open(os.devnull, 'wb'), stderr=subprocess.STDOUT) )
+            if not ( 0 == subprocess.call([ffmpeg, "-i", filename_video, "-i", filename_audio, "-c:v", "copy", "-c:a", "copy", filename], stdout=open(os.devnull, 'wb'), stderr=subprocess.STDOUT) ):
                 raise Exception('merge by ffmpeg failed')
         else:
             yt.download(youtube_id, filename)
