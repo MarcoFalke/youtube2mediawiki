@@ -624,4 +624,4 @@ if __name__ == "__main__":
             print e
             print "Exception caught! Consider using the --debug option to identify the issue."
         else:
-            raise e
+            traceback.print_exc()
