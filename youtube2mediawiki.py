@@ -14,6 +14,7 @@ import re
 import shutil
 import subprocess
 import tempfile
+import traceback
 import urllib2
 from urllib import unquote_plus
 import webbrowser
