@@ -557,6 +557,7 @@ def import_youtube(youtube_id, username, password, mediawiki_url, name=''):
     d = tempfile.mkdtemp()
     filename = os.path.join(d, u"%s.webm" % safe_name(info['title']))
     description = DESCRIPTION % info
+    result_url = None
     try:
         if MERGE_DASH:
             filename_video = os.path.join(d, "video.dat")
