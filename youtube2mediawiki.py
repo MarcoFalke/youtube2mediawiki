@@ -623,3 +623,5 @@ if __name__ == "__main__":
         if not DEBUG:
             print e
             print "Exception caught! Consider using the --debug option to identify the issue."
+        else:
+            raise e
