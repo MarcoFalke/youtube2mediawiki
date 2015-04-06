@@ -502,6 +502,8 @@ class Mediawiki(object):
         if IGNORE_WARNINGS:
             args_upload['ignorewarnings'] = ''
         r = self.api('upload', args_upload)
+        if DEBUG:
+            print r
         if r and r.get('upload', {}).get('result') == 'Success':
             result_url = r['upload']['imageinfo']['descriptionurl']
             return result_url
